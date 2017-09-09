@@ -6,7 +6,9 @@ const cookieParser = require('cookie-parser');
 const bodyParser   = require('body-parser');
 const layouts      = require('express-ejs-layouts');
 const mongoose     = require('mongoose');
-
+const session      = require('express-session');
+const passport     = require('passport');
+const flahs        = require('connect-flash');
 
 mongoose.connect('mongodb://localhost/ih-project2');
 
@@ -21,6 +23,7 @@ app.locals.title = 'Express - Generated with IronGenerator';
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
+//List of Middlewares
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -28,8 +31,20 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(layouts);
 
+// app.use(session(
+//   {
+//     secret: '',
+//     resave: true,
+//     saveUninitialized: true
+//
+//   }
+// ));
+
+//ROUTES GO HERE -----------------------------
 const index = require('./routes/index');
 app.use('/', index);
+
+//ROUTES END ---------------------------------
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
