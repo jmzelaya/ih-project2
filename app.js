@@ -6,10 +6,15 @@ const cookieParser = require('cookie-parser');
 const bodyParser   = require('body-parser');
 const layouts      = require('express-ejs-layouts');
 const mongoose     = require('mongoose');
+
+//session related npm packages
 const session      = require('express-session');
 const passport     = require('passport');
-const flahs        = require('connect-flash');
+const flash        = require('connect-flash');
 
+require('./config/passport-config.js');
+
+//***DON'T FORGET TO CHANGE THIS BEFORE DEPLOYING****
 mongoose.connect('mongodb://localhost/ih-project2');
 
 const app = express();
@@ -31,18 +36,38 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(layouts);
 
-// app.use(session(
-//   {
-//     secret: '',
-//     resave: true,
-//     saveUninitialized: true
-//
-//   }
-// ));
+app.use(session(
+  {
+    secret: 'for my 2nd project',
+    resave: true,
+    saveUninitialized: true
+  }
+));
+
+app.use(passport.initialize());
+app.use(passport.session());
+app.use(flash());
+
+//currentUser defined below ------------------
+app.use((req, res, next) => {
+  if (req.user){
+      res.locals.currentUser = req.user;
+  }
+
+  else {
+    res.locals.currentUser = null;
+  }
+  //"next" prevents hang
+  next();
+});
+
 
 //ROUTES GO HERE -----------------------------
 const index = require('./routes/index');
 app.use('/', index);
+
+const myAuthRouter = require('./routes/auth-router.js');
+app.use(myAuthRouter);
 
 //ROUTES END ---------------------------------
 
