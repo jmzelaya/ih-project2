@@ -1,6 +1,6 @@
 const passport = require('passport');
 
-const userModel = require('../models/user-model.js');
+const UserModel = require('../models/user-model.js');
 
 
 passport.serializeUser((userFromDb, done) => {
@@ -31,28 +31,31 @@ const bcrypt = require('bcrypt');
 passport.use(
   new LocalStrategy(
     {
-      username: 'loginEmail',
-      password: 'loginPassword'
+      usernameField: 'loginEmail',
+      passwordField: 'loginPassword'
     },
 
     (emailValue, passValue, done) => {
+      console.log('inside find');
         UserModel.findOne(
           { email: emailValue },
 
           (err, userFromDb) => {
+            console.log('inside the user');
               if (err) {
                 done(err);
                 return;
               }
 
               if(userFromDb === null) {
+                console.log('user is null');
 
                 done(null, false, { message: 'Your email is incorrect.'});
                 return;
               }
 
               const passIsCorrect = bcrypt.compareSync(passValue, userFromDb.encryptedpassword);
-
+              console.log('4');
               if (passIsCorrect === false){
 
                   done(null, false, { message: 'Your password is incorrect'});
@@ -60,8 +63,10 @@ passport.use(
               }
 
               done(null, userFromDb);
+              console.log('5');
           }
         );
     }
+
   )
 );
