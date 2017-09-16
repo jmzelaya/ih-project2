@@ -54,6 +54,7 @@ router.post('/process-signup', (req, res, next) => {
             return;
           }
           //Give user feedback that they have signed up successfully
+          req.flash('signupSuccess', 'Sign Up Success! Please log in.');
           res.redirect('/');
         });
     }
@@ -75,5 +76,10 @@ router.post('/process-login',
       // failureFlash:true
   }, (console.log('Wierd as fuck dude')))
 );
+
+router.get('/logout', (req, res, next) => {
+  req.logout();
+  res.redirect('/login');
+});
 
 module.exports = router;

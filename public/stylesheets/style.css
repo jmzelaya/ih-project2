@@ -3,20 +3,40 @@ body {
 }
 
 a {
-  color: #00B7FF;
+  color: white;
+  float: left;
+  /*color: #00B7FF;*/
 }
 
 header{
   background-color: #3c3550;
-  height: 100px;
+  height: 88px;
   width: 100%;
 }
 
-button{
+.buttons{
+  padding: 26px;
+}
+
+.buttons button{
   background-color: #53496e;
   display: inline-block;
   float: right;
   margin-right: 20px;
+  border: 2px;
+  border-radius: 6px;
+}
+
+ul{
+  float: left;
+  padding: 0px;
+}
+
+ul li{
+  float: left;
+  list-style: none;
+  margin: 30px 10px 10px 10px;
+
 }
 /*
 .login{
@@ -26,24 +46,50 @@ button{
 .signup{
   float: left;
 }*/
-
-.srch{
-  background-color: white;
-  width: 300px;
-  height: 50px;
+.search{
+  padding: 26px;
+  float: left;
 }
 
-.srch .srch-btn{
+.srch-btn{
     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1df98b+2,13db92+100 */
   background: #1df98b; /* Old browsers */
   background: -moz-linear-gradient(top, #1df98b 2%, #13db92 100%); /* FF3.6-15 */
   background: -webkit-linear-gradient(top, #1df98b 2%,#13db92 100%); /* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(to bottom, #1df98b 2%,#13db92 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1df98b', endColorstr='#13db92',GradientType=0 ); /* IE6-9 */
+  float: left;
+  border: none;
 }
 
-img{
+input{
+  float: left;
+}
+/*img{
   height: 50px;
   width: 50px;
-  margin: 24px 10px -32px 27px;
+  /*margin: 24px 10px -32px 27px;
+}*/
+
+
+.carousel{
+  height: 500px;
+}
+
+.carousel .item{
+  height: 500px;
+}
+
+.car{
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 500px;
+  max-width: none;
+}
+
+.projects-wrapper{
+  border: 2px solid black;
+  width: 100px;
 }
