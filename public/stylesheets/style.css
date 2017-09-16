@@ -2,6 +2,10 @@ body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
+header nav .logo{
+  font-family: 'Cabin Sketch', cursive;
+  font-size: 50px;
+}
 a {
   color: white;
   float: left;
@@ -9,7 +13,7 @@ a {
 }
 
 header{
-  background-color: #3c3550;
+  background-color: #3C3564;
   height: 88px;
   width: 100%;
 }
@@ -19,7 +23,7 @@ header{
 }
 
 .buttons button{
-  background-color: #53496e;
+  background-color: #53497B;
   display: inline-block;
   float: right;
   margin-right: 20px;
