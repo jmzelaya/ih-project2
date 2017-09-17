@@ -5,7 +5,9 @@ body {
 header nav .logo{
   font-family: 'Cabin Sketch', cursive;
   font-size: 50px;
+  margin: 0px;
 }
+
 a {
   color: white;
   float: left;
@@ -40,16 +42,8 @@ ul li{
   float: left;
   list-style: none;
   margin: 30px 10px 10px 10px;
-
-}
-/*
-.login{
-  float: right;
 }
 
-.signup{
-  float: left;
-}*/
 .search{
   padding: 26px;
   float: left;
@@ -69,12 +63,6 @@ ul li{
 input{
   float: left;
 }
-/*img{
-  height: 50px;
-  width: 50px;
-  /*margin: 24px 10px -32px 27px;
-}*/
-
 
 .carousel{
   height: 500px;

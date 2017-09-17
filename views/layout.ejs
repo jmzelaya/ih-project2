@@ -15,7 +15,7 @@
 
     <!-- MY CSS file -->
     <link rel="stylesheet" href="/stylesheets/style.css">
-    <!-- GOOGLE FONT FOR LOGO -->
+    <!-- GOOGLE FONT FOR iDIY LOGO -->
     <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch" rel="stylesheet">
   </head>
 
@@ -24,16 +24,18 @@
       <nav>
         <!-- <img src="https://media.giphy.com/media/3o6Ztrs0GnTt4GkFO0/giphy.gif" /> -->
         <ul>
-          <li> <a class="logo" href="/">iDIY</a> </li>
+          <li class="logo"> <a href="/">iDIY</a> </li>
           <li> <a href="/explore">Explore</a> </li>
         </ul>
+
 
         <div class="search">
           <div class="search-input">
             <input class="search-here" type="text"/>
             <button class="srch-btn"><a href="/search">Search</a></button>
           </div>
-        </div>
+        </div> <!-- END SEARCH DIV -->
+
 
         <% if( currentUser){ %>
           <div class="buttons">
@@ -45,7 +47,7 @@
           <button class="signup"><a href="/signup">Sign Up</a></button>
           <button class="login"><a href="/login">Login</a></button>
           </div>
-        <% } %>
+        <% } %> <!-- END BUTTON LOGIC -->
 
       </nav>
     </header>
@@ -54,13 +56,19 @@
     <footer>
 
     </footer>
-    <script
-  src="https://code.jquery.com/jquery-3.2.1.min.js"
-  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-  crossorigin="anonymous"></script>
 
+    <!-- JQUERY LINK BELOW -->
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous">
+    </script>
+    <!-- END JQUERY LINK -->
+
+    <!-- BOOTSTRAP JS FILE -->
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!-- END JS FILE -->
 
   </body>
 </html>
