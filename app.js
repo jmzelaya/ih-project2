@@ -69,6 +69,12 @@ app.use('/', index);
 const myAuthRouter = require('./routes/auth-router.js');
 app.use(myAuthRouter);
 
+const myUserRouter = require('./routes/user-router.js');
+app.use(myUserRouter);
+
+const myDiyRouter = require('./routes/tutorial-router.js');
+app.use(myDiyRouter);
+
 //ROUTES END ---------------------------------
 
 // catch 404 and forward to error handler

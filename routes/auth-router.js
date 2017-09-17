@@ -6,6 +6,7 @@ const UserModel = require('../models/user-model.js');
 
 const router = express.Router();
 
+
 router.get('/signup', (req, res, next) => {
 
   if(req.user){
@@ -71,11 +72,12 @@ router.get('/login', (req, res, next) => {
 
 router.post('/process-login',
   passport.authenticate('local', {
-      successRedirect: '/',
+      successRedirect: '/user-home',
       failureRedirect: '/login',
       // failureFlash:true
   }, (console.log('Wierd as fuck dude')))
 );
+
 
 router.get('/logout', (req, res, next) => {
   req.logout();
