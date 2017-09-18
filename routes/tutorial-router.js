@@ -7,6 +7,9 @@ router.get('/create-a-diy', (req, res, next) => {
   res.render('diy-views/create.ejs');
 });
 
+router.post('/process-diy', (req, res, next) => {
+  
+});
 
 
 
