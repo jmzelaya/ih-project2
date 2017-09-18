@@ -208,20 +208,21 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1df98b', end
 
 
 /*------------- END SIGN UP PAGE STYLES ------------*/
-/*
+
 
 footer{
   background-color: #3C3564;
   height: 50px;
   width: 100%;
   color: white;
-  bottom: 0;
-  position: absolute;
-  margin: 0 auto;
-}*/
+  /* bottom: 0; */
+  /* position: absolute; */
+  margin-top: 292px;
+}
 
 .brushes{
   width: 60%;
   position: absolute;
   left: 215px;
+  z-index: -1;
 }
