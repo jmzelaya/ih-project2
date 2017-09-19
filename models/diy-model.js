@@ -10,7 +10,7 @@ const diySchema = new Schema({
     },
     owner: {
       type: Schema.Types.ObjectId,
-      required: true
+      // required: true
     },
     description: {
       type: String,
@@ -21,14 +21,14 @@ const diySchema = new Schema({
       // required: true
     },
 
-    supplyList: [
-      {
-        item: {
-          type: String,
-          required: true
-        }
-      }
-    ],
+    // supplyList: [
+    //   {
+    //     item: {
+    //       type: String,
+    //       required: true
+    //     }
+    //   }
+    // ],
 
     steps:[
       {
@@ -42,7 +42,7 @@ const diySchema = new Schema({
         },
         stepDesc: {
           type: String,
-          required: true
+          // required: true
         }
       }
     ]
