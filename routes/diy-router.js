@@ -1,27 +1,25 @@
 const express = require('express');
-
+const multer  = require('multer');
 const userModel = require('../models/user-model.js');
 const DiyModel = require('../models/diy-model.js');
 const router = express.Router();
 
 const myUploader = multer(
     {
-      dest: __dirname + '/..public/uploads/'
+      dest: __dirname + '/../public/uploads/'
     }
 );
 
-// const myUploader = multer(
-//   {
-//     dest: __dirname + '/../public/uploads/'
-//   }
-// );
-//
+
 router.get('/diys/new', (req, res, next) => {
   res.render('diy-views/diy-form.ejs');
 });
 
-router.post('/diys',(req, res, next) => {
-  console.log('show meeee' + req.body.stepTitle);
+router.post('/diys',
+  // myUploader.single('diyFinalImg'),
+  myUploader.single('stepImg'),
+  (req, res, next) => {
+  console.log('show meeee step title ----->' + req.body.stepTitle);
   const theDIY = new DiyModel({
     title: req.body.diyTitle,
     description: req.body.diyDesc,
@@ -34,7 +32,7 @@ router.post('/diys',(req, res, next) => {
         stepDesc: req.body.stepTitle,
       },
       {
-        stepImage: req.body.stepImg
+        stepImage: '/uploads/' + req.body.stepImg
       }
     ],
     // steps.stepImage: req.body.stepImg,
