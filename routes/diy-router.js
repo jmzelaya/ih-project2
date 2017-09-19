@@ -10,6 +10,9 @@ const myUploader = multer(
     }
 );
 
+router.get('/my-diys', (req, res, next) => {
+  res.render('diy-views/my-diy.ejs');
+});
 
 router.get('/diys/new', (req, res, next) => {
   res.render('diy-views/diy-form.ejs');
@@ -46,7 +49,7 @@ router.post('/diys',
       next(err);
       return;
     }
-    res.redirect('/');
+    res.redirect('/my-diy');
   });
 });
 
