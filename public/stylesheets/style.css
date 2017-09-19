@@ -197,7 +197,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1df98b', end
   color: white;
   font-size: 15px;
   padding: 0px 40px;
-  height: 420px;
+  height: 450px;
   border-radius: 3px;
 }
 
@@ -217,7 +217,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1df98b', end
    border-width: 3px 3px 3px 0px;
    border-radius: 3px;
    padding: 0px 40px;
-   height: 420px;
+   height: 450px;
 }
 
 .auth-right h2{
