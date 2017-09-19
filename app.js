@@ -74,7 +74,7 @@ app.use(myAuthRouter);
 const myUserRouter = require('./routes/user-router.js');
 app.use(myUserRouter);
 
-const myDiyRouter = require('./routes/tutorial-router.js');
+const myDiyRouter = require('./routes/diy-router.js');
 app.use(myDiyRouter);
 
 //ROUTES END ---------------------------------
