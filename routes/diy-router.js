@@ -20,21 +20,21 @@ router.post('/diys',
   myUploader.single('stepImg'),
   (req, res, next) => {
   console.log('show meeee step title ----->' + req.body.stepTitle);
+  console.log('show meeee step desc ----->' + req.body.stepDesc);
+
   const theDIY = new DiyModel({
     title: req.body.diyTitle,
     description: req.body.diyDesc,
     diyFinalImg: req.body.diyImg,
-    steps:[
-      {
+    steps:[{
+
         stepTitle: req.body.stepTitle,
-      },
-      // {
-      //   stepDesc: req.body.stepTitle,
-      // },
-      // {
-      //   stepImage: '/uploads/' + req.body.stepImg
-      // }
-    ],
+
+        stepDesc: req.body.stepDesc,
+
+        stepImage: '/uploads/' + req.body.stepImg
+
+    }],
     // steps.stepImage: req.body.stepImg,
     // steps.stepDesc: req.body.stepDesc,
     owner: req.user._id
