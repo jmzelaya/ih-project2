@@ -12,10 +12,12 @@ const session      = require('express-session');
 const passport     = require('passport');
 const flash        = require('connect-flash');
 
+require('dotenv').config();
+
 require('./config/passport-config.js');
 
 //***DON'T FORGET TO CHANGE THIS BEFORE DEPLOYING****
-mongoose.connect('mongodb://localhost/ih-project2');
+mongoose.connect(process.env.MONGODB_URI);
 
 const app = express();
 
