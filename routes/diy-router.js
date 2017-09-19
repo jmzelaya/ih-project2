@@ -28,12 +28,12 @@ router.post('/diys',
       {
         stepTitle: req.body.stepTitle,
       },
-      {
-        stepDesc: req.body.stepTitle,
-      },
-      {
-        stepImage: '/uploads/' + req.body.stepImg
-      }
+      // {
+      //   stepDesc: req.body.stepTitle,
+      // },
+      // {
+      //   stepImage: '/uploads/' + req.body.stepImg
+      // }
     ],
     // steps.stepImage: req.body.stepImg,
     // steps.stepDesc: req.body.stepDesc,
