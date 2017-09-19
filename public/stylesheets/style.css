@@ -7,7 +7,7 @@ h2{
   font-size: 40px;
   text-align: center;
   color: dimgrey;
-  margin-top: 60px;
+  margin: 50px 0px 30px 0px;
 }
 
 header nav .logo{
@@ -20,7 +20,6 @@ header nav .logo{
 
 a {
   color: white;
-  float: left;
   /*color: #00B7FF;*/
 }
 
@@ -33,6 +32,10 @@ header{
   background-color: #3C3564;
   height: 88px;
   width: 100%;
+}
+
+button a{
+  text-align: center;
 }
 
 .buttons{
@@ -129,37 +132,37 @@ input{
 
 /*--------------  FORM STYLES ------------------*/
 
-#form {
+.login-form {
   margin: 50px auto;
   width: 380px;
 }
 
-#form label {
+.form label {
   color: #666;
   display: inline-block;
   margin-bottom: 10px;
   margin-top: 10px;
-  text-align: center;
+  text-align: left;
   width: 100%;
 }
 
-#form input,
-#form button {
+.form input,
+.form button {
   box-sizing: border-box;
   font-size: 14px;
   outline: 0;
   padding: 4px;
   width: 100%;
+  height: 31px
 }
 
-#form button {
+.form button {
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1df98b+2,13db92+100 */
 background: #1df98b; /* Old browsers */
 background: -moz-linear-gradient(top, #1df98b 2%, #13db92 100%); /* FF3.6-15 */
 background: -webkit-linear-gradient(top, #1df98b 2%,#13db92 100%); /* Chrome10-25,Safari5.1-6 */
 background: linear-gradient(to bottom, #1df98b 2%,#13db92 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1df98b', endColorstr='#13db92',GradientType=0 ); /* IE6-9 */
-  border: 1px solid #43a3e6;
   border-radius: 4px;
   color: #fff;
   cursor: pointer;
@@ -171,9 +174,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1df98b', end
   transition: .3s ease background;
   width: 100%;
   margin-top: 16px;
+  border: none;
 }
 
-#form button:hover {
+.form button:hover {
   background: #fff;
   color: #43a3e6;
   transition: .3s ease background;
@@ -184,29 +188,50 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1df98b', end
 /*--------------- SIGN UP PAGE STYLES --------------*/
 
 .sign-up{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-image: url("/images/buttons.png");
+  width: 690px;
+  margin: 0 auto;
 }
-
-.sign-up div{
-  float: left;
-}
-
 
 .auth-left{
-     /*Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1df98b+0,00dba0+45,4a90c9+100 */
-  background: #1df98b; /* Old browsers */
-  background: -moz-linear-gradient(top, #1df98b 0%, #00dba0 45%, #4a90c9 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(top, #1df98b 0%,#00dba0 45%,#4a90c9 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom, #1df98b 0%,#00dba0 45%,#4a90c9 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1df98b', endColorstr='#4a90c9',GradientType=0 ); /* IE6-9 */
-  height: 300px;
-  width: 200px;
+  background-color: #625989;
+  color: white;
+  font-size: 15px;
+  padding: 0px 40px;
+  height: 420px;
+  border-radius: 3px;
 }
 
+.auth-left h2{
+  color: white;
+  font-size: 35px;
+  margin-top: 35px;
+}
 
+.auth-left ul li{
+  margin: 20px 0px 0px 0px;
+}
+
+.auth-right{
+   border-color: #625989;
+   border-style: dashed;
+   border-width: 3px 3px 3px 0px;
+   border-radius: 3px;
+   padding: 0px 40px;
+   height: 420px;
+}
+
+.auth-right h2{
+  font-size: 35px;
+  margin-top: 35px;
+}
+
+#facebook {
+  background: #3B5998;
+}
+
+#google {
+  background: #dd4b39;
+}
 /*------------- END SIGN UP PAGE STYLES ------------*/
 
 

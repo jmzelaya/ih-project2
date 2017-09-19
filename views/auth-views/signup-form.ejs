@@ -1,40 +1,36 @@
 <h2> Sign Up </h2>
 
 
-<div class="sign-up">
+<div class="sign-up container">
+  <div class="row">
+    <div class="auth-left col-sm-6">
+      <h2>What you get</h2>
+      <hr />
+      <ul>
+        <li>- Create your own DIY projects</li>
+        <li>- Browse through hundreds of projects</li>
+        <li>- Follow other users and their projects</li>
+        <li>- Save your favorite projects for later</li>
+      </ul>
+    </div>
 
+    <div class="auth-right col-sm-6">
+      <h2>Get Started</h2>
+      <hr />
+      <form class="form" action="/process-signup" method="post">
+        <label for="email-input">Email</label>
+        <input id="email-input" name="signupEmail" type="email"
+          placeholder="example@idiy.com"/>
+        <br />
+        <label for="password-input">Password</label>
+        <input id="password-input" name="signupPass" type="password"
+          placeholder="*******"/>
+        <br />
 
-  <div class="auth-left">
-    <ul>
-      <li>sample 1</li>
-      <br />
-      <li>sample 2</li>
-      <br />
-      <li>sample 3</li>
-      <br />
-      <li>sample 4</li>
-      <br />
-      <li>sample 5</li>
-      <br />
-    </ul>
-  </div>
-
-  <div class="auth-right">
-    <form id="form" action="/process-signup" method="post">
-      <label for="email-input">Email</label>
-      <input id="email-input" name="signupEmail" type="email"
-        placeholder="example@idiy.com"/>
-      <br />
-      <label for="password-input">Password</label>
-      <input id="password-input" name="signupPass" type="password"
-        placeholder="*******"/>
-      <br />
-
-      <button><a href="/auth/facebook">Login with Facebook</a></button>
-      <button><a href="/auth/google">Login with Google</a></button>
-
-
-      <button>Sign Up</button>
-    </form>
+        <button>Sign Up</button>
+        <button id="facebook"><a href="/auth/facebook">Login with Facebook</a></button>
+        <button id="google"><a href="/auth/google">Login with Google</a></button>
+      </form>
+    </div>
   </div>
 </div>
