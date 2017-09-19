@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const Schema = mongoose.Schema;
 
-const diyModel = require('../models/diy-model.js');
+const DiyModel = require('../models/diy-model.js');
 
 const userSchema = new Schema(
   {

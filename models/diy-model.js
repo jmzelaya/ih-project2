@@ -8,13 +8,17 @@ const diySchema = new Schema({
     title: {
       type: String
     },
-    creator: {
+    owner: {
       type: Schema.Types.ObjectId,
       required: true
     },
     description: {
       type: String,
-      required: true
+      // required: true
+    },
+    diyFinalImg:{
+      type: String,
+      // required: true
     },
 
     supplyList: [
@@ -33,6 +37,10 @@ const diySchema = new Schema({
           required: true
         },
         stepImage: {
+          type: String,
+          // required: true
+        },
+        stepDesc: {
           type: String,
           required: true
         }
