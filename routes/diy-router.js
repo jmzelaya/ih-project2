@@ -17,28 +17,31 @@ router.get('/diys/new', (req, res, next) => {
 
 router.post('/diys',
   // myUploader.single('diyFinalImg'),
-  myUploader.single('stepImg'),
+  myUploader
+  // .any(),
+  .fields([
+    { name: 'stepImg'},
+    { name: 'diyImg'}
+  ]),
   (req, res, next) => {
   console.log('show meeee step title ----->' + req.body.stepTitle);
   console.log('show meeee step desc ----->' + req.body.stepDesc);
+  console.log(req.files);
 
   const theDIY = new DiyModel({
     title: req.body.diyTitle,
     description: req.body.diyDesc,
-    diyFinalImg: req.body.diyImg,
-    steps:[{
-
-        stepTitle: req.body.stepTitle,
-
-        stepDesc: req.body.stepDesc,
-
-        stepImage: '/uploads/' + req.body.stepImg
-
-    }],
-    // steps.stepImage: req.body.stepImg,
-    // steps.stepDesc: req.body.stepDesc,
+    diyFinalImg: '/uploads/' + req.files.diyImg[0].filename,
     owner: req.user._id
   });
+
+    for( i = 0; i < req.body.stepTitle.length ; i++){
+      theDIY.steps[i] = {
+        stepTitle: req.body.stepTitle[i],
+        stepDesc: req.body.stepDesc[i],
+        stepImage: '/uploads/' + req.files.stepImg[i].filename
+      };
+    }
 
   theDIY.save((err) => {
     if (err){
@@ -46,27 +49,16 @@ router.post('/diys',
       next(err);
       return;
     }
-    res.redirect('/my-diy');
+    res.redirect('/');
 
   });
 });
 
-router.get('/my-diys', (req, res, next) => {
-  res.render('diy-views/my-diy.ejs');
-});
+// router.get('/my-diys', (req, res, next) => {
+//   res.render('diy-views/my-diy.ejs');
+// });
 
-// DiyModel.find(
-//   {owner: req.user._id},
-//
-//   (err, myDiys) =>{
-//     if (err) {
-//       next(err);
-//       return;
-//     }
-//     res.locals.listOfDiys = myDiys;
-//     res.render('diy-views/my-diy.ejs');
-//   }
-// );
+
 
 
 module.exports = router;

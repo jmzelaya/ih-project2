@@ -21,14 +21,6 @@ const diySchema = new Schema({
       // required: true
     },
 
-    // supplyList: [
-    //   {
-    //     item: {
-    //       type: String,
-    //       required: true
-    //     }
-    //   }
-    // ],
 
     steps:[
       {
@@ -44,7 +36,7 @@ const diySchema = new Schema({
           type: String,
           // required: true
         }
-      }
+      } //end of step #1
     ]
 });
 

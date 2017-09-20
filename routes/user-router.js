@@ -1,12 +1,25 @@
 const express = require('express');
-
+const DiyModel = require('../models/diy-model.js');
 const router = express.Router();
 
 
 router.get('/user-home', (req, res, next) => {
-  res.render('user-home.ejs');
-});
 
+  DiyModel.find(
+    {owner: req.user._id},
+
+    (err, myDiys) =>{
+      if (err) {
+        next(err);
+        return;
+      }
+      res.locals.listOfDiys = myDiys;
+      res.render('user-home.ejs');
+    }
+  );
+
+
+});
 
 
 module.exports = router;
