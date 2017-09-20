@@ -1,6 +1,14 @@
-<h2></h2>
+  <h2>Main Title: <%= diyInfo.title %></h2>
+  <p> Description: <%= diyInfo.description %></p>
+  <p><img src="<%= diyInfo.diyImg%>"</p>
 
 
-listOfDiys.forEach((aDIY) => {
-
-});
+<ol>
+<% diyInfo.steps.forEach((diyInfo) => { %>
+  <li>
+    <h3><%= diyInfo.stepTitle %></h3>
+    <p><%= diyInfo.stepDesc %></p>
+    <img src= "/uploads/<%= diyInfo.stepImage %>"/>
+  </li>
+<% }) %>
+</ol>

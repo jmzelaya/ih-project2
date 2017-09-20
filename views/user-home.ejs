@@ -20,10 +20,10 @@
       <%listOfDiys.forEach((aDIY) => {%>
         <div class="diy">
           <img src="<%= aDIY.diyFinalImg %>"/>
-          <h3><%= aDIY.title%></h3>
+          <h3><%= aDIY.title %></h3>
           <p><%= aDIY.description %></p>
+          <button><a href="/diys/<%= aDIY._id %>">DETAILS</a></button>
         </div>
-
       <%})%>
     </div>
 

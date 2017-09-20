@@ -54,11 +54,20 @@ router.post('/diys',
   });
 });
 
-// router.get('/my-diys', (req, res, next) => {
-//   res.render('diy-views/my-diy.ejs');
-// });
-
-
+router.get('/diys/:diyId', (req, res, next) =>{
+  DiyModel.findById(
+    req.params.diyId,
+    (err, dbDIY) => {
+      if(err){
+        next(err);
+        return;
+      }
+      res.locals.diyInfo = dbDIY;
+      console.log(dbDIY);
+      res.render('diy-views/diy-view.ejs');
+    }
+  );
+});
 
 
 module.exports = router;

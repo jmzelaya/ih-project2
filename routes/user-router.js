@@ -18,7 +18,6 @@ router.get('/user-home', (req, res, next) => {
     }
   );
 
-
 });
 
 
