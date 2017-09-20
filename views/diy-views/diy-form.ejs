@@ -1,40 +1,35 @@
 <h2> Create your own DIY !</h2>
 
 
-<form class="form" method="post" action="/diys" enctype="multipart/form-data">
-  <label for="title-input">Title</label>
-  <input id="title-input" name="diyTitle" type="text"
-    placeholder="How to Create a DIY"/>
-  <br />
+<div class="container">
+  <form class="form" method="post" action="/diys" enctype="multipart/form-data">
+    <div class="diy-summary well">
+      <label for="title-input">Title</label>
+      <input id="title-input" name="diyTitle" type="text"
+        placeholder="How to Create a DIY"/>
 
-  <label for="desc-input">Description</label>
-  <textarea id="desc-input" name="diyDesc"></textarea>
-  <br />
+      <label for="desc-input">Description</label>
+      <textarea id="desc-input" name="diyDesc"></textarea>
 
-  <label for="finalImg"> Image of Completed Project</label>
-  <input id="finalImg" name="diyImg" type="file" />
-  <br />
+      <label for="finalImg"> Image of Completed Project</label>
+      <input id="finalImg" name="diyImg" type="file" />
+    </div>
 
-  <div class="step-form">
-    <label for="stitle">Title</label>
-    <input id="stitle" name="stepTitle"
-      placeholder="Click the 'Create-A-Diy' button"/>
-    <br />
+    <div class="step-form well">
+      <label for="stitle">Title</label>
+      <input id="stitle" name="stepTitle"
+        placeholder="Click the 'Create-A-Diy' button"/>
+      <br />
 
-    <label for="simg">Upload a Photo</label>
-    <input id="simg" name="stepImg" type="file"/>
-    <br />
+      <label for="simg">Upload a Photo</label>
+      <input id="simg" name="stepImg" type="file"/>
+      <br />
 
-    <label for="sdesc">Description of Step</label>
-    <textarea id="sdesc" name="stepDesc"
-      placeholder="Go to iDiy homepage and log in to get started"></textarea>
-    <br />
-  </div>
-
-
-
-
-
-
-  <button>Save DIY</button>
-</form>
+      <label for="sdesc">Description of Step</label>
+      <textarea id="sdesc" name="stepDesc"
+        placeholder="Go to iDiy homepage and log in to get started"></textarea>
+      <br />
+    </div>
+    <button>Save DIY</button>
+  </form>
+</div>

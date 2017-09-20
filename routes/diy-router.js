@@ -10,9 +10,6 @@ const myUploader = multer(
     }
 );
 
-router.get('/my-diys', (req, res, next) => {
-  res.render('diy-views/my-diy.ejs');
-});
 
 router.get('/diys/new', (req, res, next) => {
   res.render('diy-views/diy-form.ejs');
@@ -50,9 +47,26 @@ router.post('/diys',
       return;
     }
     res.redirect('/my-diy');
+
   });
 });
 
+router.get('/my-diys', (req, res, next) => {
+  res.render('diy-views/my-diy.ejs');
+});
+
+// DiyModel.find(
+//   {owner: req.user._id},
+//
+//   (err, myDiys) =>{
+//     if (err) {
+//       next(err);
+//       return;
+//     }
+//     res.locals.listOfDiys = myDiys;
+//     res.render('diy-views/my-diy.ejs');
+//   }
+// );
 
 
 module.exports = router;

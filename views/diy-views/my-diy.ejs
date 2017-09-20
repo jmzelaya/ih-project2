@@ -1,1 +1,11 @@
 <h2> Your DIY Projects </h2>
+
+<ul>
+<% listOfDiys.forEach((oneDiy) => { %>
+  <li>
+    <h3> <%= oneDiy.title %> </h3>
+    <img src="<%= oneDiy.diyFinalImg %>"/>
+    <p> <%= oneDiy.owner %> </p>
+  </li>
+<% }) %>
+</ul>

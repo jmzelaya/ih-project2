@@ -112,6 +112,9 @@ input{
 
 .carousel .item img{
   width: 100%;
+}
+
+.carousel .item .sew{
   height: 110%;
 }
 
@@ -182,7 +185,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1df98b', end
 }
 
 .form button:hover {
-  background: #fff;
+  background: #1df98b;
   color: #43a3e6;
   transition: .3s ease background;
 }
@@ -234,8 +237,21 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1df98b', end
   background: #3B5998;
 }
 
+#facebook:hover{
+  background: #22407F;
+  color: #082665;
+  transition: .3s ease background;
+}
+
+
 #google {
   background: #dd4b39;
+}
+#google:hover{
+  background: #C43220;
+  color: #C43220;
+  transition: .3s ease background;
+
 }
 
 .splash{
@@ -263,4 +279,22 @@ footer{
   position: absolute;
   left: 215px;
   z-index: -1;
+}
+
+.nav-tabs{
+  width: 100%;
+  float: none;
+}
+
+.nav-tabs a{
+  color: slategrey;
+}
+
+.diy{
+  border: 1px solid black;
+  padding: 20px;
+}
+
+.diy img{
+  float: left;
 }
