@@ -1,6 +1,6 @@
   <h2>Main Title: <%= diyInfo.title %></h2>
   <p> Description: <%= diyInfo.description %></p>
-  <p><img src="<%= diyInfo.diyImg%>"</p>
+  <p><img src="<%= diyInfo.diyFinalImg%>"</p>
 
 
 <ol>
@@ -8,7 +8,7 @@
   <li>
     <h3><%= diyInfo.stepTitle %></h3>
     <p><%= diyInfo.stepDesc %></p>
-    <img src= "/uploads/<%= diyInfo.stepImage %>"/>
+    <img src= "<%= diyInfo.stepImage %>"/>
   </li>
 <% }) %>
 </ol>
