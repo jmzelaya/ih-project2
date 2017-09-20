@@ -69,5 +69,19 @@ router.get('/diys/:diyId', (req, res, next) =>{
   );
 });
 
+router.get('/diys/:diyId/edit', (req, res, next) => {
+  DiyModel.findById(
+    req.params.diyId,
+    (err, dbDIY) => {
+      if (err){
+        next(err);
+        return;
+      }
+      res.locals.diyInfo = dbDIY;
+      res.render('diy-views/edit-diy.ejs');
+    }
+  );
+});
+
 
 module.exports = router;

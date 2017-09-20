@@ -1,0 +1,39 @@
+<h2> Edit Your DIY </h2>
+
+
+<div class="container">
+  <form class="form" method="post" action="/diys/<%= diyInfo._id%>" enctype="multipart/form-data">
+    <div class="diy-summary well">
+      <label for="title-input">Title</label>
+      <input id="title-input" name="diyTitle" type="text"
+        value="<%= diyInfo.title %>"/>
+
+      <label for="desc-input">Description</label>
+      <textarea id="desc-input" name="diyDesc"><%=diyInfo.description%></textarea>
+
+      <label for="finalImg"> Image of Completed Project</label>
+      <input id="finalImg" name="diyImg" type="file"
+        value="<%=diyInfo.diyFinalImg %>"/>
+    </div>
+
+    
+    <ol class="step-ol">
+      <li class="step-form-li well">
+        <label for="stitle">Title</label>
+        <input id="stitle" name="stepTitle[]"
+          value="<%=diyInfo.stepTitle%>"/>
+        <br />
+
+        <label for="simg">Upload a Photo</label>
+        <input id="simg" name="stepImg" type="file"
+          value="<%= diyInfo.stepImage%>"/>
+        <br />
+
+        <label for="sdesc">Description of Step</label>
+        <textarea id="sdesc" name="stepDesc"><%= diyInfo.stepDesc %></textarea>
+        <br />
+      </li>
+    </ol>
+    <button>Save DIY</button>
+  </form>
+</div>
