@@ -75,7 +75,7 @@ router.post('/process-login',
       successRedirect: '/user-home',
       failureRedirect: '/login',
       // failureFlash:true
-  // }, (console.log('Weird AF dude')))
+  })
 );
 
 
