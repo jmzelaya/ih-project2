@@ -5,18 +5,25 @@
 
 $(document).ready(function () {
   $('.add-step').click( function () {
-    $('.step-ol').append(`<li class="step-form-li well"><label for="stitle">Title</label>
-    <input id="stitle" name="stepTitle[]"
-      placeholder="Click the 'Create-A-Diy' button"/>
-    <br />
+    $('.step-ol').append(`<li class="step-form-li well">
+            <div class="row">
+              <div class="col-sm-6">
+                <label for="stitle">Title</label>
+                <input id="stitle" name="stepTitle[]"/>
+                <br />
+              </div>
+              <div class="col-sm-6">
+                <label for="simg">Upload a Photo</label>
+                <input id="simg" name="stepImg" type="file"/>
+                <br />
+              </div>
 
-    <label for="simg">Upload a Photo</label>
-    <input id="simg" name="stepImg" type="file"/>
-    <br />
-
-    <label for="sdesc">Description of Step</label>
-    <textarea id="sdesc" name="stepDesc[]"
-      placeholder="Go to iDiy homepage and log in to get started"></textarea>
-    <br /><li>`);
+              <div class="col-sm-12">
+                <label for="sdesc">Description of Step</label>
+                <textarea id="sdesc" name="stepDesc[]"></textarea>
+                <br />
+              </div>
+            </div>
+          </li><hr />`);
   });
 });
