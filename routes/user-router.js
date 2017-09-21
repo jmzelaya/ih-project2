@@ -13,6 +13,7 @@ router.get('/user-home', (req, res, next) => {
         next(err);
         return;
       }
+      
       res.locals.listOfDiys = myDiys;
       res.render('user-home.ejs');
     }

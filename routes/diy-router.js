@@ -84,38 +84,50 @@ router.get('/diys/:diyId/edit', (req, res, next) => {
   );
 });
 
-// router.post('diys/:diyId',
-//   // myUploader.single('diyFinalImg'),
-//   myUploader
-//   // .any(),
-//   .fields([
-//     { name: 'stepImg'},
-//     { name: 'diyImg'}
-//   ]),
-//
-//   (err, dbDIY) => {
-//     if(err) {
-//       next(err);
-//       return;
-//     }
-//
-//     title: req.body.diyTitle,
-//     description: req.body.diyDesc,
-//     diyFinalImg: '/uploads/' + req.files.diyImg[0].filename,
-//     owner: req.user._id
-//   });
-//
-//     for( i = 0; i < req.body.stepTitle.length ; i++){
-//       theDIY.steps[i] = {
-//         stepTitle: req.body.stepTitle[i],
-//         stepDesc: req.body.stepDesc[i],
-//         stepImage: '/uploads/' + req.files.stepImg[i].filename
-//       };
-//     }
-//
-//   }
-//
-//   )
+router.post('/diys/:diyId/process',
+myUploader
+// .any(),
+.fields([
+  { name: 'stepImg'},
+  { name: 'diyImg'}
+]),
+(req, res, next) => {
+    DiyModel.findById(
+    req.params.diyId,
+
+  (err, dbDIY) => {
+    if(err) {
+      console.log(err);
+      next(err);
+      return;
+    }
+    console.log('test');
+    dbDIY.title = req.body.diyTitle;
+    dbDIY.description = req.body.diyDesc;
+    if(req.file){
+    dbDIY.diyFinalImg = '/uploads/' + req.files.diyImg[0].filename;
+    }
+    dbDIY.owner = req.user._id;
+
+    // 
+    // for( i = 0; i < req.body.stepTitle.length ; i++){
+    //   theDIY.steps[i] = {
+    //     stepTitle: req.body.stepTitle[i],
+    //     stepDesc: req.body.stepDesc[i],
+    //     stepImage: '/uploads/' + req.files.stepImg[i].filename
+    //   };
+    // }
+
+      dbDIY.save((err) => {
+        if(err){
+          next(err);
+          return;
+        }
+        res.redirect('/user-home');
+      });
+  }
+);
+});
 
 router.get('/diys/search', (req, res, next) => {
     res.render('diy-search.ejs');
@@ -140,6 +152,7 @@ router.get('/diys/search-results', (req, res, next) => {
         res.render('search-results.ejs');
       }
     );
+    res.redirect('/user-home');
 });
 
 
@@ -155,6 +168,7 @@ router.post('/diys/:diyId/delete', (req, res, next) => {
       res.redirect('/user-home');
     }
   );
+
 });
 
 module.exports = router;
