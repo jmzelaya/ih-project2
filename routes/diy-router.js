@@ -49,7 +49,7 @@ router.post('/diys',
       next(err);
       return;
     }
-    res.redirect('/');
+    res.redirect('/user-home');
 
   });
 });

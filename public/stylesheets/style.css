@@ -114,6 +114,11 @@ input{
   height: 145px;
 
 }
+
+.btn.btn-danger{
+  float: right;
+  margin-top: -120px;
+}
 /*--------- Home Page Carousel--------*/
 
 .carousel{
