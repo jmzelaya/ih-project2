@@ -47,10 +47,19 @@
   </a>
 </div>
 
-<div class="projects-wrapper">
-  <div class="project">
-    <img src="images/carousel/sew.jpg"/>
-    <h3>Title</h3>
-    <p> User </p>
+<div class="container">
+  <h2>Recent DIYs</h2>
+  <hr />
+  <div class="row">
+  <% listOfDiys.forEach((allDiys) => { %>
+  <div class="projects-wrapper col-sm-3">
+      <div class="project">
+        <img src="<%= allDiys.diyFinalImg %>"/>
+        <h3><%= allDiys.title %></h3>
+        <p><%= allDiys.description %></p>
+        <!-- <p> User </p> -->
+      </div>
   </div>
+  <% }) %>
+    </div>
 </div>
