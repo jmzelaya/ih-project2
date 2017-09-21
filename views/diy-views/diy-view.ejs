@@ -1,14 +1,19 @@
-  <h2>Main Title: <%= diyInfo.title %></h2>
-  <p> Description: <%= diyInfo.description %></p>
-  <p><img src="<%= diyInfo.diyFinalImg%>"</p>
+<div class="container detail">
+
+  <h2><%= diyInfo.title %></h2>
+  <div class="well">
+    <p><%= diyInfo.description %></p>
+    <p><img src="<%= diyInfo.diyFinalImg%>"</p>
+  </div>
 
 
-<ol>
-<% diyInfo.steps.forEach((diyInfo) => { %>
-  <li>
-    <h3><%= diyInfo.stepTitle %></h3>
-    <p><%= diyInfo.stepDesc %></p>
-    <img src= "<%= diyInfo.stepImage %>"/>
-  </li>
-<% }) %>
-</ol>
+  <ol>
+  <% diyInfo.steps.forEach((diyInfo) => { %>
+    <li class="well">
+      <h3><%= diyInfo.stepTitle %></h3>
+      <p><%= diyInfo.stepDesc %></p>
+      <img src= "<%= diyInfo.stepImage %>"/>
+    </li>
+  <% }) %>
+  </ol>
+</div>

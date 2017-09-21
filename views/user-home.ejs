@@ -1,7 +1,7 @@
 <h2>Welcome</h2>
 
 
-<div class="container">
+<div class="container profile">
   <div class="user-info">
     <!-- <img src="" alt=""> -->
     <p> Welcome User! </p>
@@ -18,16 +18,19 @@
   <div class="tab-content">
     <div role="tabpanel" class="tab-pane fade in active" id="home">
       <%listOfDiys.forEach((aDIY) => {%>
-        <div class="diy">
-          <img src="<%= aDIY.diyFinalImg %>"/>
-          <h3><%= aDIY.title %></h3>
-          <p><%= aDIY.description %></p>
-          <button><a href="/diys/<%= aDIY._id %>">DETAILS</a></button>
-          <button><a href="/diys/<%= aDIY._id %>/edit">EDIT</a></button>
+        <div class="projects-wrapper">
+            <div class="project">
+              <img src="<%= aDIY.diyFinalImg %>"/>
+              <h3><%= aDIY.title %></h3>
+              <p><%= aDIY.description %></p>
+              <button class="btn btn-success"><a href="/diys/<%= aDIY._id %>">DETAILS <i class="glyphicon glyphicon-list"></i></a></button>
+              <button class="btn btn-success"><a href="/diys/<%= aDIY._id %>/edit">EDIT <i class="glyphicon glyphicon-pencil"></i></a></button>
+              <div class="clearfix">
+              </div>
+            </div>
         </div>
       <%})%>
     </div>
-
 
 
 

@@ -1,6 +1,7 @@
 body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   position: relative;
+  color: slategrey;
 }
 
 h2{
@@ -129,6 +130,7 @@ input{
 .projects-wrapper{
   border: 1px solid #ccc;
   border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0.03);
   width: 23%;
   margin: 1%;
   padding: 25px;
@@ -149,12 +151,48 @@ input{
   font-size: 20px;
   font-weight: bold;
   text-transform: capitalize;
+  color: #3C3564;
+}
+
+.recent h4{
+  text-align: center;
 }
 
 .project a.btn{
   width: 100%;
 }
 
+.profile .projects-wrapper{
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.03);
+  padding: 25px;
+}
+
+.profile .projects-wrapper img{
+  width: 20%;
+  float: left;
+  margin-right: 30px;
+}
+
+.profile .projects-wrapper p{
+  white-space: normal;
+  overflow: visible;
+  text-overflow: ellipsis;
+  height: auto;
+}
+
+.container.detail h2{
+  text-transform: capitalize;
+}
+
+.container.detail .well{
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: rgba(0, 0, 0, 0.02)!important;
+
+}
 /*--------------  FORM STYLES ------------------*/
 
 .login-form {
