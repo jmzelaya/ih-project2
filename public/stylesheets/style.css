@@ -191,8 +191,14 @@ input{
   border: 1px solid #ccc;
   border-radius: 4px;
   background: rgba(0, 0, 0, 0.02)!important;
-
 }
+
+textarea{
+ width: 100%;
+ height: 100px;
+}
+
+
 /*--------------  FORM STYLES ------------------*/
 
 .login-form {

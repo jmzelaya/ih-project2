@@ -16,19 +16,26 @@
     </div>
     <ol class="step-ol">
       <li class="step-form-li well">
-        <label for="stitle">Title</label>
-        <input id="stitle" name="stepTitle[]"
-          placeholder="Click the 'Create-A-Diy' button"/>
-        <br />
+        <div class="row">
+          <div class="col-sm-6">
+            <label for="stitle">Title</label>
+            <input id="stitle" name="stepTitle[]"
+              placeholder="Click the 'Create-A-Diy' button"/>
+            <br />
+          </div>
+          <div class="col-sm-6">
+            <label for="simg">Upload a Photo</label>
+            <input id="simg" name="stepImg" type="file"/>
+            <br />
+          </div>
 
-        <label for="simg">Upload a Photo</label>
-        <input id="simg" name="stepImg" type="file"/>
-        <br />
-
-        <label for="sdesc">Description of Step</label>
-        <textarea id="sdesc" name="stepDesc[]"
-          placeholder="Go to iDiy homepage and log in to get started"></textarea>
-        <br />
+          <div class="col-sm-12">
+            <label for="sdesc">Description of Step</label>
+            <textarea id="sdesc" name="stepDesc[]"
+              placeholder="Go to iDiy homepage and log in to get started"></textarea>
+            <br />
+          </div>
+        </div>
       </li>
     </ol>
     <button type="button" class="add-step"> Next Step </button>
