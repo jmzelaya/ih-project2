@@ -152,7 +152,7 @@ router.post('/diys/:diyId/delete', (req, res, next) => {
         next(err);
         return;
       }
-      res.redirect('/my-diys');
+      res.redirect('/user-home');
     }
   );
 });
