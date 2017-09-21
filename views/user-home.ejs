@@ -24,7 +24,7 @@
       <%listOfDiys.forEach((aDIY) => {%>
         <div class="projects-wrapper">
             <div class="project">
-              <img src="<%= aDIY.diyFinalImg %>"/>
+              <img class="user-diy-preview" src="<%= aDIY.diyFinalImg %>"/>
               <h3><%= aDIY.title %></h3>
               <p><%= aDIY.description %></p>
               <button class="btn btn-success"><a href="/diys/<%= aDIY._id %>">DETAILS <i class="glyphicon glyphicon-list"></i></a></button>

@@ -55,7 +55,7 @@
   <% listOfDiys.forEach((allDiys) => { %>
   <div class="projects-wrapper col-sm-3">
       <div class="project">
-        <img src="<%= allDiys.diyFinalImg %>"/>
+        <img class="user-diy-preview" src="<%= allDiys.diyFinalImg %>"/>
         <h3><%= allDiys.title %></h3>
         <p><%= allDiys.description %></p>
         <a class="btn btn-success"href="/diys/<%= allDiys._id %>">Try this DIY</a>

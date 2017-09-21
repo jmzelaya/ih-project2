@@ -156,6 +156,8 @@ input{
 
 .projects-wrapper .project img{
   width: 100%;
+  /*height: 217.09px;
+  width: 144.36px;*/
 }
 
 .project p{
@@ -361,11 +363,20 @@ footer a{
 
 }
 
+footer .footer-links{
+  padding: 14px;
+}
+
 .brushes{
   width: 60%;
   position: absolute;
   left: 215px;
   z-index: -1;
+}
+
+.user-diy-preview{
+  height: 217.09px;
+  width: 144.36px;
 }
 
 .nav-tabs{
