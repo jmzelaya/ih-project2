@@ -30,6 +30,9 @@
               <p><%= aDIY.description %></p>
               <button class="btn btn-success"><a href="/diys/<%= aDIY._id %>">DETAILS <i class="glyphicon glyphicon-list"></i></a></button>
               <button class="btn btn-success"><a href="/diys/<%= aDIY._id %>/edit">EDIT <i class="glyphicon glyphicon-pencil"></i></a></button>
+              <form method="post" action="/diys/<%= aDIY._id %>/delete">
+                <button> Delete </button>
+              </form>
               <div class="clearfix">
               </div>
             </div>

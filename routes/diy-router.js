@@ -117,5 +117,44 @@ router.get('/diys/:diyId/edit', (req, res, next) => {
 //
 //   )
 
+router.get('/diys/search', (req, res, next) => {
+    res.render('diy-search.ejs');
+});
+
+router.get('/diys/search-results', (req, res, next) => {
+    const mySearchRegex = new RegExp(req.query.searchTerm, 'i');
+
+
+    DiyModel.find(
+      { name: mySearchRegex },
+
+
+      (err, searchResults) => {
+        if (err) {
+            next(err);
+            return;
+        }
+
+        res.locals.listOfResults = searchResults;
+        res.locals.lastSearch = req.query.searchTerm;
+        res.render('search-results.ejs');
+      }
+    );
+});
+
+
+router.post('/diys/:diyId/delete', (req, res, next) => {
+  DiyModel.findByIdAndRemove(
+    req.params.diyId,
+
+    (err, diyInfo) => {
+      if(err) {
+        next(err);
+        return;
+      }
+      res.redirect('/my-diys');
+    }
+  );
+});
 
 module.exports = router;

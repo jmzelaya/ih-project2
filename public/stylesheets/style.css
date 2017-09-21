@@ -104,6 +104,11 @@ input{
 .test{
   color:purple;
 }
+
+.step{
+  font-size: 28px;
+  margin: 0px;
+}
 /*--------- Home Page Carousel--------*/
 
 .carousel{
@@ -337,6 +342,13 @@ footer{
   /* bottom: 0; */
   /* position: absolute; */
   margin-top: 292px;
+  text-align: center;
+}
+
+footer a{
+  padding-top: 20px;
+  margin-left: 10px;
+
 }
 
 .brushes{

@@ -1,1 +1,27 @@
 <h2> Search Results </h2>
+
+<form method="get" action="/diys/search-results">
+  <label for="term-input"> Search Again </label>
+  <input id="term-input" name="searchTerm" type="search"
+      value="<%= lastSearch %>"/>
+
+  <button> Search </button>
+</form>
+
+<p> You search for <strong><%= lastSearch %></strong>.</p>
+<p> There were <%= listOfDiys.length %> results. </p>
+
+<ul>
+  <div class="row">
+  <% listOfDiys.forEach((allDiys) => { %>
+  <div class="projects-wrapper col-sm-3">
+      <div class="project">
+        <img src="<%= allDiys.diyFinalImg %>"/>
+        <h3><%= allDiys.title %></h3>
+        <p><%= allDiys.description %></p>
+        <a class="btn btn-success"href="/diys/<%= allDiys._id %>">Try this DIY</a>
+      </div>
+  </div>
+  <% }) %>
+</ul>
+<h2> Search Results </h2>
