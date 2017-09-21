@@ -109,6 +109,11 @@ input{
   font-size: 28px;
   margin: 0px;
 }
+
+.mug{
+  height: 145px;
+
+}
 /*--------- Home Page Carousel--------*/
 
 .carousel{
