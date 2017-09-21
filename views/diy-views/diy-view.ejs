@@ -17,3 +17,21 @@
   <% }) %>
   </ol>
 </div>
+
+<a class="test" href="/diys/<%= diyInfo._id %>/reviews/new">
+  Review This DIY
+</a>
+
+<h3> Reviews </h3>
+
+<ul>
+  <% diyInfo.reviews.forEach((oneReview) => { %>
+    <li>
+      <span> <%='⭐️'.repeat(oneReview.stars)%> </span>
+
+      <p> <%= oneReview.content %> </p>
+
+      <b> <%= oneReview.author %> </b>
+    </li>
+  <% }); %>
+</ul>

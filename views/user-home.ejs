@@ -17,6 +17,11 @@
   <!-- Tab panes -->
   <div class="tab-content">
     <div role="tabpanel" class="tab-pane fade in active" id="home">
+      <% if(listOfDiys.length === 0){ %>
+        <h3> You don't have any DIYs yet.</h3>
+        <a href="/diys/new"> Add your First DIY</a>
+      <% } %>
+
       <%listOfDiys.forEach((aDIY) => {%>
         <div class="projects-wrapper">
             <div class="project">

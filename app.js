@@ -77,6 +77,9 @@ app.use(myUserRouter);
 const myDiyRouter = require('./routes/diy-router.js');
 app.use(myDiyRouter);
 
+const myReviewRouter = require('./routes/review-router.js');
+app.use(myReviewRouter);
+
 //ROUTES END ---------------------------------
 
 // catch 404 and forward to error handler

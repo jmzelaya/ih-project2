@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 
 const Schema = mongoose.Schema;
+const ReviewModel = require('../models/review-model.js');
 const userModel = require('../models/user-model.js');
 
 const diySchema = new Schema({
@@ -37,7 +38,9 @@ const diySchema = new Schema({
           // required: true
         }
       } //end of step #1
-    ]
+    ],
+
+    reviews: [ReviewModel.schema]
 });
 
 

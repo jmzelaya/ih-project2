@@ -84,5 +84,38 @@ router.get('/diys/:diyId/edit', (req, res, next) => {
   );
 });
 
+// router.post('diys/:diyId',
+//   // myUploader.single('diyFinalImg'),
+//   myUploader
+//   // .any(),
+//   .fields([
+//     { name: 'stepImg'},
+//     { name: 'diyImg'}
+//   ]),
+//
+//   (err, dbDIY) => {
+//     if(err) {
+//       next(err);
+//       return;
+//     }
+//
+//     title: req.body.diyTitle,
+//     description: req.body.diyDesc,
+//     diyFinalImg: '/uploads/' + req.files.diyImg[0].filename,
+//     owner: req.user._id
+//   });
+//
+//     for( i = 0; i < req.body.stepTitle.length ; i++){
+//       theDIY.steps[i] = {
+//         stepTitle: req.body.stepTitle[i],
+//         stepDesc: req.body.stepDesc[i],
+//         stepImage: '/uploads/' + req.files.stepImg[i].filename
+//       };
+//     }
+//
+//   }
+//
+//   )
+
 
 module.exports = router;

@@ -4,9 +4,9 @@
 <div class="container">
   <form class="form" method="post" action="/diys" enctype="multipart/form-data">
     <div class="diy-summary well">
+      <h3> Main Summary </h3>
       <label for="title-input">Title</label>
-      <input id="title-input" name="diyTitle" type="text"
-        placeholder="How to Create a DIY"/>
+      <input id="title-input" name="diyTitle" type="text"/>
 
       <label for="desc-input">Description</label>
       <textarea id="desc-input" name="diyDesc"></textarea>
@@ -18,9 +18,9 @@
       <li class="step-form-li well">
         <div class="row">
           <div class="col-sm-6">
+            <h3> Step </h3>
             <label for="stitle">Title</label>
-            <input id="stitle" name="stepTitle[]"
-              placeholder="Click the 'Create-A-Diy' button"/>
+            <input id="stitle" name="stepTitle[]"/>
             <br />
           </div>
           <div class="col-sm-6">
@@ -31,8 +31,7 @@
 
           <div class="col-sm-12">
             <label for="sdesc">Description of Step</label>
-            <textarea id="sdesc" name="stepDesc[]"
-              placeholder="Go to iDiy homepage and log in to get started"></textarea>
+            <textarea id="sdesc" name="stepDesc[]"></textarea>
             <br />
           </div>
         </div>

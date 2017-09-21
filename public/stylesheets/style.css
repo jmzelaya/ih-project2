@@ -101,6 +101,9 @@ input{
   float: left;
 }
 
+.test{
+  color:purple;
+}
 /*--------- Home Page Carousel--------*/
 
 .carousel{
