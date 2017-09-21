@@ -63,6 +63,7 @@ router.get('/diys/:diyId', (req, res, next) =>{
         return;
       }
       res.locals.diyInfo = dbDIY;
+      res.locals.listOfDiys = dbDIY;
       console.log(dbDIY);
       res.render('diy-views/diy-view.ejs');
     }

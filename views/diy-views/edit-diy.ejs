@@ -16,8 +16,9 @@
         value="<%=diyInfo.diyFinalImg %>"/>
     </div>
 
-    
+
     <ol class="step-ol">
+    <% diyInfo.steps.forEach((diyInfo) => { %>
       <li class="step-form-li well">
         <label for="stitle">Title</label>
         <input id="stitle" name="stepTitle[]"
@@ -33,7 +34,9 @@
         <textarea id="sdesc" name="stepDesc"><%= diyInfo.stepDesc %></textarea>
         <br />
       </li>
+      <% }) %>
     </ol>
+    <button type="button" class="add-step"> Add New Step </button>
     <button>Save DIY</button>
   </form>
 </div>
