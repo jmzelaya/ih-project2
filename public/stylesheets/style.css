@@ -127,13 +127,31 @@ input{
 /*------END Home Page Carousel--------*/
 
 .projects-wrapper{
-  border: 1px solid slategrey;
-  width: 200px;
-  margin: 50px;
-  padding: 60px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 23%;
+  margin: 1%;
+  padding: 25px;
 }
 
 .projects-wrapper .project img{
+  width: 100%;
+}
+
+.project p{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: 20px;
+}
+
+.project h3{
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.project a.btn{
   width: 100%;
 }
 
