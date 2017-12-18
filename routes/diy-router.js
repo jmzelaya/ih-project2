@@ -109,7 +109,7 @@ myUploader
     }
     dbDIY.owner = req.user._id;
 
-    // 
+    //
     // for( i = 0; i < req.body.stepTitle.length ; i++){
     //   theDIY.steps[i] = {
     //     stepTitle: req.body.stepTitle[i],
